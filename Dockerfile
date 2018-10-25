@@ -1,17 +1,14 @@
 FROM alpine:3.8
 
 # Metadata params
-ARG BUILD_DATE
-ARG VERSION=2.6.4
-ARG VCS_REF
+ARG VERSION=2.7.0
 
 # Metadata
-LABEL maintainer="Pascal A. <pascalito@gmail.com>" \
-      org.label-schema.url="https://github.com/pad92/docker-ansible-alpine/blob/master/README.md" \
-      org.label-schema.build-date=$BUILD_DATE \
+LABEL maintainer="Mikhail Konyakhin <m.konyahin@gmail.com>" \
+      org.label-schema.url="https://github.com/sportsru/docker-ansible-alpine/blob/master/README.md" \
       org.label-schema.version=$VERSION \
-      org.label-schema.vcs-url="https://github.com/pad92/docker-ansible-alpine.git" \
-      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/sportsru/docker-ansible-alpine.git" \
+      org.label-schema.vcs-ref=$VERSION \
       org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.description="Ansible on alpine docker image" \
       org.label-schema.schema-version="1.0"

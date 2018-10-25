@@ -1,6 +1,6 @@
 # Docker-Ansible base image
 
-[![Layers](https://images.microbadger.com/badges/image/pad92/ansible-alpine.svg)](https://microbadger.com/images/pad92/ansible-alpine) [![GitHub issues](https://img.shields.io/github/issues/pad92/docker-ansible-alpine.svg)](https://github.com/pad92/docker-ansible-alpine) [![Docker Automated build](https://img.shields.io/docker/automated/pad92/ansible-alpine.svg?maxAge=2592000)](https://hub.docker.com/r/pad92/ansible-alpine/) [![Docker Build Status](https://img.shields.io/docker/build/pad92/ansible-alpine.svg?maxAge=2592000)](https://hub.docker.com/r/pad92/ansible-alpine/) [![Docker Pulls](https://img.shields.io/docker/pulls/pad92/ansible-alpine.svg)](https://hub.docker.com/r/pad92/ansible-alpine/)
+[![Layers](https://images.microbadger.com/badges/image/sportsru/ansible-alpine.svg)](https://microbadger.com/images/sportsru/ansible-alpine) [![GitHub issues](https://img.shields.io/github/issues/sportsru/docker-ansible-alpine.svg)](https://github.com/sportsru/docker-ansible-alpine) [![Docker Automated build](https://img.shields.io/docker/automated/sportsru/ansible-alpine.svg?maxAge=2592000)](https://hub.docker.com/r/sportsru/ansible-alpine/) [![Docker Build Status](https://img.shields.io/docker/build/sportsru/ansible-alpine.svg?maxAge=2592000)](https://hub.docker.com/r/sportsru/ansible-alpine/) [![Docker Pulls](https://img.shields.io/docker/pulls/sportsru/ansible-alpine.svg)](https://hub.docker.com/r/sportsru/ansible-alpine/)
 
 ## Usage
 
@@ -17,7 +17,7 @@
 ```
 docker run -it --rm \
   -v ${PWD}:/ansible \
-  pad92/ansible-alpine:latest \
+  sportsru/ansible-alpine:latest \
   ansible-playbook -i inventory playbook.yml
 ```
 
@@ -26,14 +26,14 @@ docker run -it --rm \
 ```
 docker run -it --rm \
   -v ${PWD}:/ansible \
-  pad92/ansible-alpine:latest \
+  sportsru/ansible-alpine:latest \
   ansible-galaxy init role-name
 ```
 
 ### Lint Role
 
 ```
-docker run -it --rm pad92/ansible-alpine:latest \
+docker run -it --rm sportsru/ansible-alpine:latest \
   -v ${PWD}:/ansible ansible-playbook tests/playbook.yml --syntax-check
 ```
 ### Run with forwarding ssh agent
@@ -43,7 +43,7 @@ docker run -it --rm \
   -v $(readlink -f $SSH_AUTH_SOCK):/ssh-agent \
   -v ${PWD}:/ansible \
   -e SSH_AUTH_SOCK=/ssh-agent \
-  pad92/ansible-alpine:latest \
+  sportsru/ansible-alpine:latest \
   sh
 ```
 
