@@ -47,7 +47,7 @@ fi
 
 # install Galaxy roles, if any
 if [ -z "$ANSIBLE_REQUIREMENTS" ]; then
-    ANSIBLE_REQUIREMENTS=requirements.yml
+    ANSIBLE_REQUIREMENTS=galaxy.yml
 fi
 
 if [ -f "$ANSIBLE_REQUIREMENTS" ]; then

@@ -9,7 +9,7 @@
 | Variable             | Default Value    | Usage                                       |
 |----------------------|------------------|---------------------------------------------|
 | PIP_REQUIREMENTS     | requirements.txt | install python library requirements         |
-| ANSIBLE_REQUIREMENTS | requirements.yml | install ansible galaxy roles requirements   |
+| ANSIBLE_REQUIREMENTS | galaxy.yml       | install ansible galaxy roles requirements   |
 | DEPLOY_KEY           |                  | pass an SSH private key to use in container |
 
 ### Run Playbook
