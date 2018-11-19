@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
 # Metadata params
-ARG VERSION=2.7.1
+ARG VERSION=2.7.2
 
 # Metadata
 LABEL maintainer="Mikhail Konyakhin <m.konyahin@gmail.com>" \
@@ -21,12 +21,16 @@ RUN apk --update add \
         py-pip \
         python \
         rsync \
-        sshpass
+        sshpass \
+        gcc \
+        musl-dev \
+        python2-dev \
+        openldap-dev
 RUN apk --update add --virtual \
         .build-deps \
         python-dev \
         libffi-dev \
-        openssl-dev \
+        libressl-dev \
         build-base \
  && pip install --upgrade \
         pip \
