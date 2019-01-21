@@ -25,7 +25,8 @@ RUN apk --update add \
         gcc \
         musl-dev \
         python2-dev \
-        openldap-dev
+        openldap-dev \
+        libffi-dev
 RUN apk --update add --virtual \
         .build-deps \
         python-dev \
