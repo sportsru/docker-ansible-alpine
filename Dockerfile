@@ -1,7 +1,7 @@
 FROM alpine:3.9
 
 # Metadata params
-ARG VERSION=2.7.10
+ARG VERSION=2.7.12
 
 # Metadata
 LABEL maintainer="Mikhail Konyakhin <m.konyahin@gmail.com>" \
