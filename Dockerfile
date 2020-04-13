@@ -1,7 +1,7 @@
-FROM alpine:3.9
+FROM python:3.8.2-alpine3.11
 
 # Metadata params
-ARG VERSION=2.7.13
+ARG VERSION=2.9.6
 
 # Metadata
 LABEL maintainer="Mikhail Konyakhin <m.konyahin@gmail.com>" \
@@ -18,25 +18,22 @@ RUN apk --update add \
         git \
         openssh-client \
         openssl \
-        py-pip \
-        python \
         rsync \
         sshpass \
         gcc \
         musl-dev \
-        python2-dev \
         openldap-dev \
         libffi-dev
 RUN apk --update add --virtual \
         .build-deps \
-        python-dev \
         libffi-dev \
         libressl-dev \
         build-base \
- && pip install --upgrade \
+ && python -m pip install --upgrade \
         pip \
         cffi \
- && pip install \
+        PyNaCl\
+ && python -m pip install \
         ansible==${VERSION} \
  && apk del \
         .build-deps \
@@ -59,3 +56,4 @@ ENTRYPOINT ["entrypoint"]
 
 # default command: display Ansible version
 CMD [ "ansible-playbook", "--version" ]
+
