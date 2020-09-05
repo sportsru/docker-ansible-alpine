@@ -1,7 +1,7 @@
-FROM python:3.8.3-alpine3.11
+FROM python:3.8.5-alpine3.11
 
 # Metadata params
-ARG VERSION=2.9.9
+ARG VERSION=2.9.13
 
 # Metadata
 LABEL maintainer="Mikhail Konyakhin <m.konyahin@gmail.com>" \
